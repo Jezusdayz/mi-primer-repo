@@ -3,29 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer pagina</title>
+    <title>Fundamentos de HTML</title>
      <link rel="icon" href="img/dinero.png" type="image/png">
+     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-   <h1>Bienvenido a mi pagina</h1>
-   <h2>Estas son mis iamgenes: </h2>
-<img src="img/mi_novia.jpg" alt="Foto de mi novia Lana del Rey" width="400">
-<h2>Mi artista favorita de la prepa</h2>
-<br><br>
-<img src="img/gossip.webp" alt="Foto de mi serie favorita" width="400">
-<h2>Mi serie favorita actualmente</h2>
-<br><br>
-<img src="img/hatsu.gif" alt="Hatsune Miku bailando xD" width="400">
-<h2>Miku bailando un cumbion</h2>
-<br><br>
-<video width="400" height="300" controls>
-   <source src="img/JIJIJIJA.mp4" type="video/mp4">
-   Tu navegador no soporta el elemento de video.
-</video>
- <h2>JIJIJIJA</h2>
-   <br><br>
-<a href="https://google.com">
-   <button>Ir a Google</button>
-</a>
+   <header>
+      <h1>Fundamentos de HTML</h1>
+      <p>Html es el lenguaje de marcado de utilizado para crear paginas web. Es la base de cualquier sitio web y se utiliza para estructurar el contenido de las páginas.</p>
+      <nav>
+         <ul>
+            <li><a href="#anatomia">Elementos</a></li>
+            <li><a href="#contenido">Contenido</a></li>
+            <li><a href="#semantico">Semántica</a></li>
+            <li><a href="#contenedores">div vs span</a></li>
+            <li><a href="#formularios">Formularios</a></li>
+            <li><a href="#practicas">Buenas prácticas</a></li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <section id="anatomia">
+         <h2>Anatomía de un documento HTML</h2>
+         <p>Un documento HTML se compone de varias partes, incluyendo la declaración DOCTYPE, el elemento raíz 
+           <strong>
+            <pre>
+               <code>&lt;html&gt;, el encabezado&lt;head&gt;y el cuerpo&lt;body&gt;.</pre>
+            </strong>
+         </p>
+         <div class="tip">
+            los atributos proporcionan informacion extra.
+            Ejemplo: <strong>class="nota"</strong>
+         </div>
+   </section>
+   <section>
+      <h2>Contenido de un documento HTML</h2>
+      <p>El contenido de un documento HTML puede ser texto, imágenes, enlaces, formularios, etc. Es importante estructurar este contenido de manera semántica para mejorar la accesibilidad y el SEO.</p>
+      <h3>Enlaces</h3>
+      <a href="https://www.google.com">Esto es un enlace externo</a>
+      <br>
+      <a href="#anatomia">Esto es un enlace interno</a>
+      <br>
+      <a href="otro.html#anatomia">Este es un enlace a otro html que apunta a la sección anatomia</a>
+      <br>
+      <a href="otro.html">Este es un enlace a otro html que esta en la misma carpeta</a>
+      <h3>Imagen accesible</h3>
+      <img src="img/gossip.webp" alt="Imagen de gossip girl serie" width="300">
+      <h3>Listas</h3>
+      <ol>
+      <li>Primer elemento</li>
+      <li>Segundo elemento</li>
+      <li>Tercer elemento</li>
+      </ol>
+      <ul>
+      <li>Elemento A</li>
+      <li>Elemento B</li>
+      <li>Elemento C</li>
+      </ul>
+   </section>
+   <section id="semantico">
+      <h2>HTML Semántico</h2>
+      <p>El HTML semántico utiliza etiquetas que describen claramente el propósito del contenido. Esto mejora la accesibilidad y el SEO.</p>
+      <h3>Ejemplos de etiquetas semánticas</h3>
+      <ul>
+         <li><strong>&lt;header&gt;</strong>: Define el encabezado de una sección o página.</li>
+         <li><strong>&lt;nav&gt;</strong>: Define un bloque de navegación.</li>
+         <li><strong>&lt;article&gt;</strong>: Define un artículo independiente.</li>
+         <li><strong>&lt;section&gt;</strong>: Define una sección genérica.</li>
+         <li><strong>&lt;footer&gt;</strong>: Define el pie de página de una sección o página.</li>
+         <li><strong>&lt;main&gt;</strong>: Define el contenido principal de la página.</li>
+      </ul>
+      <div class="tip">
+         No uses div para todo, elige etiquetas semánticas para mejorar la estructura y accesibilidad de tu página y SEO.
+      </div>
+   </section>
+   <section id="contenedores">
+      <h2>Contenedores: div vs span</h2>
+      <p><strong>&lt;div&gt;</strong> es un contenedor de bloque utilizado para agrupar elementos y aplicar estilos o scripts. <strong>&lt;span&gt;</strong> es un contenedor en línea utilizado para aplicar estilos a una parte específica del texto.</p>
+      <h3>Ejemplo de uso de div</h3>
+      <div class="caja">
+         <p>Este es un bloque dentro de un div.</p>
+      </div>
+      <h3>Ejemplo de uso de span</h3>
+      <p>Este es un texto con un <span class="resaltado">fragmento resaltado</span>.</p>
+   </section>
+   <section id="formularios">
+      <h2>Formularios en HTML</h2>
+      <p>Los formularios permiten a los usuarios enviar datos a un servidor. Se componen de varios elementos como campos de texto, botones, etc.</p>
+      <h3>Ejemplo de formulario</h3>
+      <form action="/submit" method="post">
+         <label for="nombre">Nombre:</label>
+         <input type="text" id="nombre" name="nombre" required>
+         <br>
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+         <br>
+         <button type="submit">Enviar</button>
+      </form>
+   </main>
 </body>
 </html>
