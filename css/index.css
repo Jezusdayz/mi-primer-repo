@@ -2,3 +2,13 @@
     background-color: #5181c5;
     color: #fff;
 }
+
+.example_div{
+    background-color: bisque;
+    color: #333;
+}
+
+.example_span{
+    background-color: #f0e68c;
+    color: #333;
+}

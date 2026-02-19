@@ -81,11 +81,11 @@
       <h2>Contenedores: div vs span</h2>
       <p><strong>&lt;div&gt;</strong> es un contenedor de bloque utilizado para agrupar elementos y aplicar estilos o scripts. <strong>&lt;span&gt;</strong> es un contenedor en línea utilizado para aplicar estilos a una parte específica del texto.</p>
       <h3>Ejemplo de uso de div</h3>
-      <div class="caja">
+      <div class="example_div">
          <p>Este es un bloque dentro de un div.</p>
       </div>
       <h3>Ejemplo de uso de span</h3>
-      <p>Este es un texto con un <span class="resaltado">fragmento resaltado</span>.</p>
+      <p>Este es un texto con un <span class="example_span" style="color: blueviolet; font-weight: bold;">fragmento resaltado</span>.</p>
    </section>
    <section id="formularios">
       <h2>Formularios en HTML</h2>
@@ -98,8 +98,15 @@
          <label for="email">Email:</label>
          <input type="email" id="email" name="email" required>
          <br>
+         <label for="password">Contraseña:</label>
+         <input type="password" id="password" name="password" required>
+         <br>
+         <label for="birthdate">Fecha de nacimiento:</label>
+         <input type="date" id="birthdate" name="birthdate" required>
+         <br>
          <button type="submit">Enviar</button>
       </form>
+   </section>
    </main>
 </body>
 </html>
